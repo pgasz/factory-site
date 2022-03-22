@@ -1,0 +1,82 @@
+@import './variables.scss';
+
+#home {
+    --max-width: #{$max-width};
+    --main_color: #{$niebieski};
+    --text_color: #{$biel};
+    --hover-button_color: #{$grafit};
+}
+
+#home {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .home__img-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .home__content {
+        max-width: var(--max-width);
+        margin: 0rem auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        padding: 3rem 1rem 3rem 0rem;
+        line-height: 1;
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+        color: var(--text_color);
+        padding-left: 1rem;
+        * {
+            max-width: 100vw;
+        }
+        h1 {
+            color: var(--main_color);
+            font-size: clamp(3rem, 15vw, 10rem);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: clamp(1.8rem, 8vw, 3.5rem);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            font-weight: 200;
+            font-style: italic;
+            quotes: '“' '”' '‘' '’';
+            &::before {
+                content: open-quote;
+            }
+            &::after {
+                content: close-quote;
+            }
+        }
+        p {
+            font-size: clamp(1rem, 4vw, 2.5rem);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .button {
+            padding: 1rem 3rem;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            background-color: var(--main_color);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s ease-in-out !important;
+            text-shadow: none;
+            width: fit-content;
+            &:hover {
+                background-color: var(--hover-button_color);
+            }
+        }
+    }
+}

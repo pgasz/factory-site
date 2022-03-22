@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'navbar.scss';
+@import 'home.scss';
+@import 'paralax.scss';
+@import 'service-section.scss';
+@import 'team.scss';
+@import 'kontakt.scss';
+@import 'footer.scss';
+* {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+html {
+    width: 100vw !important;
+    overflow-x: hidden !important;
+}
+body {
+    width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#par1 {
+    max-height: 700px;
+    height: 40vh;
+    min-height: 400px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #00000080;
+        z-index: 4;
+    }
+}
+#par2 {
+    max-height: 700px;
+    height: 40vh;
+    min-height: 400px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #00000080;
+        z-index: 4;
+    }
+}

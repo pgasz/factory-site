@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+#footer {
+    --footer-background: #{$biel};
+    ---footer-text_color: #{$grafit};
+    --main_color: #{$niebieski};
+}
+
+#footer {
+    padding: 5rem calc((100vw - 1300px) / 2);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    background-color: var(--footer-background);
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .footer__desc {
+            padding: 0 2rem;
+            h1 {
+                margin-bottom: 1.5rem;
+                color: var(--main_color);
+                font-size: 2.5rem;
+            }
+            p {
+                margin-bottom: 1rem;
+                color: var(---footer-text_color);
+            }
+            #phone {
+                font-weight: bold;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: var(---footer-text_color);
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    color: var(--main_color);
+                }
+            }
+        }
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1rem 2rem;
+
+            .footer__title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: var(---footer-text_color);
+            }
+            .footer__link {
+                text-decoration: none;
+                color: var(---footer-text_color);
+                font-size: 14px;
+                margin-bottom: 0.5rem;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    color: var(--main_color);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $medium) {
+    #footer {
+        .footer__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: $small) {
+    #footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        .footer__wrapper {
+            .footer__desc {
+                padding: 1rem;
+            }
+            .footer__links {
+                padding: 1rem;
+            }
+        }
+    }
+}
